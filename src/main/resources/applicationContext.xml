@@ -9,10 +9,14 @@
 
     <context:property-placeholder location= " classpath:task.properties"/>
 
-    <bean id="testBean"
-          class="kkm.TestBean"
-            scope="prototype">
-        <property name="name" value="kkm"/>
+    <bean id="workerType"
+          class="kkm.Worker">
+        <property name="types" value="${val_types}"/>
+    </bean>
+
+    <bean id="taskType"
+          class="kkm.Task_class">
+        <property name="types" value="${num_types}"/>
     </bean>
 
 </beans>

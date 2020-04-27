@@ -12,8 +12,8 @@ public class Generator {
 
         ArrayList<Integer> Array = new ArrayList<>();
         int z = (int)( Math.random() * 8 + 3);
-        System.out.println("Wait " + z + " second");
-        java.util.concurrent.TimeUnit.SECONDS.sleep(z);
+        System.out.println("Wait " + "Tut potom popravit' nado " +z + " second");
+        java.util.concurrent.TimeUnit.SECONDS.sleep(1);
         z = (int) (1 + Math.random()*40);
         for (int i=0;i<z;i++){
             Array.add((int) (1 + Math.random()*40));
