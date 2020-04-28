@@ -35,8 +35,8 @@ public class Generator {
 
         String[][] Array = new String[m][n];
         int z = (int)( Math.random() * 8 + 3);
-        System.out.println("Wait " + z + " second");
-        java.util.concurrent.TimeUnit.SECONDS.sleep(z);
+        System.out.println("Wait " +"Tut potom tozje popravit' nado "+ z + " second");
+        java.util.concurrent.TimeUnit.SECONDS.sleep(1);
         for (int i = 0; i < Array.length; i++) {
             for (int j = 0; j < Array[i].length; j++) {
                 z = (int)( Math.random() * 2);

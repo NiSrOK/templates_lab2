@@ -10,10 +10,20 @@ interface  Task{
 
 class Task_class implements Task {
 private static int num;
+private  static  int even_odd;
+private  static  int str_type;
 
-    public void setTypes(int types) {
-        num  = types;
-        //System.out.println(num);
+    public void setNum(int num) {
+        this.num = num;
+        //System.out.println(q_types);
+    }
+    public void setEven_odd(int even_odd) {
+        this.even_odd = even_odd;
+        //System.out.println("______________________" + even_odd);
+    }
+    public void setStr_type(int str_type) {
+        this.str_type = str_type;
+        System.out.println("______________________" + str_type);
     }
     @Override
     public int Question(int type_) {
@@ -37,10 +47,10 @@ private static int num;
         if (type_ == 3) {
 
             //Scanner in = new Scanner(System.in);
-            System.out.println("Delete: " + "\n" + "1.Even" + "\n" + "2. Odd"+ "\n" + num);
+            System.out.println("Delete: " + "\n" + "1.Even" + "\n" + "2. Odd"+ "\n" + even_odd);
             //int num = in.nextInt();
             //in.close();
-            return num;
+            return even_odd;
 
         }
         if (type_ == 4) {
@@ -48,14 +58,15 @@ private static int num;
             //Scanner in = new Scanner(System.in);
             System.out.println("Choose Handler:" + "\n" + "1. The first handler - returns the glued string"
                     + "\n" + "2. The second handler counts the number of words in each line, the total number of words and characters across all lines of the list" +
-                    "\n" + "3. Apply both handlers"+ "\n" + num);
+                    "\n" + "3. Apply both handlers"+ "\n" + str_type);
             //int num = in.nextInt();
             //in.close();
-            return num;
+            return str_type;
         } else {
             return 0;
         }
     }
+
 }
 class Worker extends Task_class{
     public static ArrayList<Integer> listInt;

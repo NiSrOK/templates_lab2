@@ -18,7 +18,9 @@
     <bean id="taskType"
           class="kkm.Task_class"
             scope="prototype">
-        <property name="types" value="${num_types}"/>
+        <property name="num" value="${num_types}"/>
+        <property name="even_odd" value="${even_odd_}"/>
+        <property name="str_type" value="${str_type_}"/>
     </bean>
 
 </beans>
