@@ -20,9 +20,8 @@ private static int num;
 
         if (type_ == 1) {
             //Scanner in = new Scanner(System.in);
-            System.out.println("Type of array:" + "\n" + "1.Int" + "\n" + "2.String");
+            System.out.println("Type of array:" + "\n" + "1.Int" + "\n" + "2.String"+ "\n" + num);
             //int num = in.nextInt();
-
             return num;
 
         }
@@ -31,14 +30,14 @@ private static int num;
 
             //Scanner in = new Scanner(System.in);
             System.out.println("Choose Handler:" + "\n" + "1. The first handler returns their sum, average value, minimum and maximum element"
-                    + "\n" + "2. The second handler removes even or odd elements from the list, depending on the setting" + "\n" + "3. Apply both handlers");
+                    + "\n" + "2. The second handler removes even or odd elements from the list, depending on the setting" + "\n" + "3. Apply both handlers"+ "\n" + num);
             //int num = in.nextInt();
             return num;
         }
         if (type_ == 3) {
 
             //Scanner in = new Scanner(System.in);
-            System.out.println("Delete: " + "\n" + "1.Even" + "\n" + "2. Odd");
+            System.out.println("Delete: " + "\n" + "1.Even" + "\n" + "2. Odd"+ "\n" + num);
             //int num = in.nextInt();
             //in.close();
             return num;
@@ -49,7 +48,7 @@ private static int num;
             //Scanner in = new Scanner(System.in);
             System.out.println("Choose Handler:" + "\n" + "1. The first handler - returns the glued string"
                     + "\n" + "2. The second handler counts the number of words in each line, the total number of words and characters across all lines of the list" +
-                    "\n" + "3. Apply both handlers");
+                    "\n" + "3. Apply both handlers"+ "\n" + num);
             //int num = in.nextInt();
             //in.close();
             return num;
@@ -86,6 +85,7 @@ class Worker extends Task_class{
         String Type = " ";
         System.out.println("Type of array:" + "\n" + "1.Int" + "\n" + "2.String");
         //Worker.q = task.Question(1);
+
         switch (Worker.q) {
             case 1:
                 listInt = Generator.Gen(type);
@@ -146,6 +146,8 @@ class Worker extends Task_class{
                 break;
 
         }
+
+
     }
 
 }

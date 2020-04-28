@@ -62,10 +62,10 @@ public class Handler implements  Operation{
     public void getIntResultFirst(ArrayList<Integer> list){
         ArrayList<Integer> res = HandIntFirst(list);
 
-        System.out.println("Сумма элементов массива: " + res.get(0));
-        System.out.println("Минимальный элемент массива: " + res.get(1));
-        System.out.println("Максимальный элемент массива: " + res.get(2));
-        System.out.println("Среднее значение элементов массива: " + res.get(3));
+        System.out.println("Sum of array elements: " + res.get(0));
+        System.out.println("Minimal array element: " + res.get(1));
+        System.out.println("Maximum array element: " + res.get(2));
+        System.out.println("Average value of array elements: " + res.get(3));
     }
     @Override
     public void getIntResultSecond (ArrayList<Integer> list, int q) throws IOException{
@@ -77,7 +77,7 @@ public class Handler implements  Operation{
             }
             writer.flush();
         }
-        System.out.println("Массив записан в файл");
+        System.out.println("Array written to file");
 
     }
     @Override
@@ -134,7 +134,7 @@ public class Handler implements  Operation{
     public void getStrResultFirst (String[][] list){
         ArrayList<String> res = HandStrFirst(list);
 
-        System.out.println("«Cклеенная» строка: ");
+        System.out.println("Glued string: ");
         for (int i=0;i<res.size();i++){
             System.out.print(res.get(i));
         }
@@ -168,14 +168,14 @@ public class Handler implements  Operation{
         int line = res.get(0);
         int S = 0;
         res.remove(0);
-        System.out.println("Количество строк: "+ line);
+        System.out.println("Number of lines: "+ line);
 
         for (int i=0;i<line;i++){
-            System.out.println("Количество слов в " + (i) + " строке: " + res.get(i));
+            System.out.println("Word Count in " + (i) + " line: " + res.get(i));
             S+=res.get(i);
         }
-        System.out.println("Количество слов всего: " + S);
-        System.out.println("Количество символов всего: " + res.get(res.size()-1));
+        System.out.println("Number of words in total: " + S);
+        System.out.println("Number of characters in total: " + res.get(res.size()-1));
 
     }
 

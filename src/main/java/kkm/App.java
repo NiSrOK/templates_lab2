@@ -13,17 +13,14 @@ public class App extends Task_class{
     public static String[][] listStr;
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        ClassPathXmlApplicationContext worker_val = new ClassPathXmlApplicationContext("applicationContext.xml");
-        ClassPathXmlApplicationContext task_val = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        Worker Worker_val  = worker_val.getBean("workerType", Worker.class);
-        Task_class Task_val =  task_val.getBean("workerType", Worker.class);
-
-        worker_val.close();
-        task_val.close();
+        Worker Worker_val  = context.getBean("workerType", Worker.class);
+        Task_class Task_val =  context.getBean("taskType", Task_class.class);
 
         Worker worker = new Worker();
         worker.work();
+        context.close();
     }
 
 }
