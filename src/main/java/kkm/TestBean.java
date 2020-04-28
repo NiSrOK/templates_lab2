@@ -2,7 +2,6 @@ package kkm;
 
 public class TestBean {
     private String name;
-
     public TestBean() {
     }
     public void setName(String name) {
@@ -12,6 +11,5 @@ public class TestBean {
     public String getName() {
         return  name;
     }
-
 
 }

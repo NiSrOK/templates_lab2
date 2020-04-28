@@ -23,7 +23,7 @@ private  static  int str_type;
     }
     public void setStr_type(int str_type) {
         this.str_type = str_type;
-        System.out.println("______________________" + str_type);
+        //System.out.println("______________________" + str_type);
     }
     @Override
     public int Question(int type_) {
@@ -33,11 +33,9 @@ private  static  int str_type;
             System.out.println("Type of array:" + "\n" + "1.Int" + "\n" + "2.String"+ "\n" + num);
             //int num = in.nextInt();
             return num;
-
         }
 
         if (type_ == 2) {
-
             //Scanner in = new Scanner(System.in);
             System.out.println("Choose Handler:" + "\n" + "1. The first handler returns their sum, average value, minimum and maximum element"
                     + "\n" + "2. The second handler removes even or odd elements from the list, depending on the setting" + "\n" + "3. Apply both handlers"+ "\n" + num);
@@ -45,7 +43,6 @@ private  static  int str_type;
             return num;
         }
         if (type_ == 3) {
-
             //Scanner in = new Scanner(System.in);
             System.out.println("Delete: " + "\n" + "1.Even" + "\n" + "2. Odd"+ "\n" + even_odd);
             //int num = in.nextInt();
@@ -76,16 +73,13 @@ class Worker extends Task_class{
     Worker(ArrayList<Integer> listInt, String[][] listStr) throws IOException, InterruptedException {
         this.listInt = listInt;
         this.listStr = listStr;
-
     }
-
  */
     public void setTypes(int types) {
         q  = types;
         //System.out.println(q);
     }
     public static void work() throws IOException, InterruptedException{
-
         //Create to hands ( int and string) to help with task
         Handler int_hand = new Handler();
         Handler str_hand = new Handler();
@@ -157,8 +151,5 @@ class Worker extends Task_class{
                 break;
 
         }
-
-
     }
-
 }

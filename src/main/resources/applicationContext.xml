@@ -6,18 +6,19 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
-
     <context:property-placeholder location= " classpath:task.properties"/>
 
     <bean id="workerType"
           class="kkm.Worker"
             scope="prototype">
+
         <property name="types" value="${val_types}"/>
     </bean>
 
     <bean id="taskType"
           class="kkm.Task_class"
             scope="prototype">
+
         <property name="num" value="${num_types}"/>
         <property name="even_odd" value="${even_odd_}"/>
         <property name="str_type" value="${str_type_}"/>

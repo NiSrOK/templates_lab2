@@ -1,5 +1,4 @@
 package kkm;
-
 import java.util.ArrayList;
 import java.io.*;
 import java.util.Collections;
@@ -12,8 +11,8 @@ public class Generator {
 
         ArrayList<Integer> Array = new ArrayList<>();
         int z = (int)( Math.random() * 8 + 3);
-        System.out.println("Wait " + "Tut potom popravit' nado " +z + " second");
-        java.util.concurrent.TimeUnit.SECONDS.sleep(1);
+        System.out.println("Wait " + z + " second");
+        java.util.concurrent.TimeUnit.SECONDS.sleep(z);
         z = (int) (1 + Math.random()*40);
         for (int i=0;i<z;i++){
             Array.add((int) (1 + Math.random()*40));
@@ -35,8 +34,8 @@ public class Generator {
 
         String[][] Array = new String[m][n];
         int z = (int)( Math.random() * 8 + 3);
-        System.out.println("Wait " +"Tut potom tozje popravit' nado "+ z + " second");
-        java.util.concurrent.TimeUnit.SECONDS.sleep(1);
+        System.out.println("Wait " + z + " second");
+        java.util.concurrent.TimeUnit.SECONDS.sleep(z);
         for (int i = 0; i < Array.length; i++) {
             for (int j = 0; j < Array[i].length; j++) {
                 z = (int)( Math.random() * 2);
@@ -65,9 +64,6 @@ public class Generator {
             }
             writer.flush();
         }
-
         return Array;
     }
-
-
 }
