@@ -10,19 +10,24 @@ interface  Task{
 
 class Task_class implements Task {
 private static int num;
+private static int handlerInt;
 private  static  int even_odd;
-private  static  int str_type;
+private  static  int handlerStr;
 
     public void setNum(int num) {
         this.num = num;
+        //System.out.println(q_types);
+    }
+    public void setHandlerInt(int handlerInt) {
+        this.handlerInt = handlerInt;
         //System.out.println(q_types);
     }
     public void setEven_odd(int even_odd) {
         this.even_odd = even_odd;
         //System.out.println("______________________" + even_odd);
     }
-    public void setStr_type(int str_type) {
-        this.str_type = str_type;
+    public void sethandlerStr(int handlerStr) {
+        this.handlerStr = handlerStr;
         //System.out.println("______________________" + str_type);
     }
     @Override
@@ -38,9 +43,9 @@ private  static  int str_type;
         if (type_ == 2) {
             //Scanner in = new Scanner(System.in);
             System.out.println("Choose Handler:" + "\n" + "1. The first handler returns their sum, average value, minimum and maximum element"
-                    + "\n" + "2. The second handler removes even or odd elements from the list, depending on the setting" + "\n" + "3. Apply both handlers"+ "\n" + num);
+                    + "\n" + "2. The second handler removes even or odd elements from the list, depending on the setting" + "\n" + "3. Apply both handlers"+ "\n" + handlerInt);
             //int num = in.nextInt();
-            return num;
+            return handlerInt;
         }
         if (type_ == 3) {
             //Scanner in = new Scanner(System.in);
@@ -55,10 +60,10 @@ private  static  int str_type;
             //Scanner in = new Scanner(System.in);
             System.out.println("Choose Handler:" + "\n" + "1. The first handler - returns the glued string"
                     + "\n" + "2. The second handler counts the number of words in each line, the total number of words and characters across all lines of the list" +
-                    "\n" + "3. Apply both handlers"+ "\n" + str_type);
+                    "\n" + "3. Apply both handlers"+ "\n" + handlerStr);
             //int num = in.nextInt();
             //in.close();
-            return str_type;
+            return handlerStr;
         } else {
             return 0;
         }
@@ -88,8 +93,7 @@ class Worker extends Task_class{
         App task = new App();
         int type = 0;
         String Type = " ";
-        System.out.println("Type of array:" + "\n" + "1.Int" + "\n" + "2.String");
-        //Worker.q = task.Question(1);
+        task.Question(q);
 
         switch (Worker.q) {
             case 1:

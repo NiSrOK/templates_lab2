@@ -19,9 +19,10 @@
           class="kkm.Task_class"
             scope="prototype">
 
-        <property name="num" value="${num_types}"/>
+        <property name="num" value="${val_types}"/>
+        <property name="handlerInt" value="${handlerInt}"/>
         <property name="even_odd" value="${even_odd_}"/>
-        <property name="str_type" value="${str_type_}"/>
+        <property name="handlerStr" value="${handlerStr}"/>
     </bean>
 
 </beans>
